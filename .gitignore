@@ -1,0 +1,48 @@
+# Next.js
+.next
+out
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Dependencies
+node_modules
+
+# Env / secrets
+.env*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Misc
+.DS_Store
+dist
+
+# Claude Code session files
+.claude
+
+# Legacy WordPress install (superseded by the Next.js app, not part of this repo)
+/wp-admin
+/wp-includes
+/wp-content
+wp-*.php
+xmlrpc.php
+index.php
+license.txt
+readme.html
+sitemap.xml
+.htaccess
+.htaccess.bk
+.user.ini
+php.ini
+cgi-bin
+.well-known
+google*.html
+error_log
+
+# WordPress DB dump + one-off extraction script used only for research
+/sql
+/tools

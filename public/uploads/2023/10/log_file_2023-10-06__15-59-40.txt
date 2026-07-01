@@ -1,0 +1,77 @@
+
+---Downloaded files---
+The import files for: Construction were successfully downloaded!
+Initial max execution time = 180
+Files info:
+Site URL = https://briannaintegrated.com
+Data file = /home/briannaintegrate/public_html/wp-content/uploads/2023/10/demo-content-import-file_2023-10-06__15-59-40.xml
+Widget file = /home/briannaintegrate/public_html/wp-content/uploads/2023/10/demo-widgets-import-file_2023-10-06__15-59-40.json
+Customizer file = not defined!
+Redux files:
+tx -> /home/briannaintegrate/public_html/wp-content/uploads/2023/10/demo-redux-import-file_0-2023-10-06__15-59-40.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Post Sidebar : 
+
+Recent Posts - No Title - Imported
+Recent Comments - No Title - Imported
+
+Post Single Sidebar : 
+
+Search - No Title - Imported
+Avas Recent Posts - Recent posts - Imported
+Categories - No Title - Imported
+Tag Cloud - No Title - Imported
+Meta - No Title - Imported
+
+Portfolio Single Post Sidebar : 
+
+Avas Posts Gallery - More Projects - Imported
+
+Services Single Post Sidebar : 
+
+Avas Posts Gallery - More Services - Imported
+
+Hamburger / Side Menu : 
+
+Navigation Menu - Our Services - Imported
+Avas Posts Gallery - Recent Projects - Imported
+Text - Contact Details - Imported
+
+Footer | 1 : 
+
+Text - Our Company - Imported
+
+Footer | 2 : 
+
+Navigation Menu - Our Services - Imported
+
+Footer | 3 : 
+
+Avas Recent Posts - Recent News - Imported
+
+Footer | 4 : 
+
+Text - Contact Details - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: tx finished successfully!
