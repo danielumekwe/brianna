@@ -9,6 +9,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { StatCounter } from "@/components/stat-counter";
+import { Typewriter } from "@/components/typewriter";
 import { companyProfile } from "@/lib/data/company-profile";
 import { newsPosts } from "@/lib/data/news";
 import { topLevelServices } from "@/lib/data/services";
@@ -37,7 +38,7 @@ export default function HomePage() {
       <AnimatedSection className="bg-brand-surface px-4 py-20">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-brand-dark md:text-4xl">
-            Welcome <span className="text-brand-green-ink">to Brianna</span> | Integrated
+            Welcome to <Typewriter text="Brianna" className="text-brand-green-ink" /> Integrated
           </h2>
           <p className="mt-6 text-base leading-8 text-brand-muted">{siteConfig.tagline}</p>
         </div>
