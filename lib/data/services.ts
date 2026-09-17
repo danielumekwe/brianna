@@ -3,6 +3,7 @@ import {
   ClipboardCheck,
   ClipboardList,
   Compass,
+  Cpu,
   Factory,
   Flame,
   Gauge,
@@ -19,6 +20,8 @@ export type Service = {
   summary: string;
   image: string;
   icon: LucideIcon;
+  /** Optional subheading shown above the body copy on the detail page (used for richer hero intros). */
+  tagline?: string;
   body: string[];
   bullets?: string[];
   /** Slugs of related services to cross-link (e.g. EPCIC's own phases) */
@@ -26,9 +29,8 @@ export type Service = {
 };
 
 /**
- * The 7 services shown on the Services hub, plus the 5 EPCIC phase pages
- * that are only reachable via the EPCIC sub-menu — 12 real pages total,
- * matching the live WordPress site exactly (no invented services).
+ * The 8 services shown on the Services hub, plus the 5 EPCIC phase pages
+ * that are only reachable via the EPCIC sub-menu — 13 real pages total.
  */
 export const services: Service[] = [
   {
@@ -300,9 +302,23 @@ export const services: Service[] = [
     ],
     related: ["epcic", "engineering", "procurement", "construction", "installation"],
   },
+  {
+    slug: "oil-gas-it-solutions",
+    title: "IT Products & Technical Support",
+    shortTitle: "IT Products & Technical Support",
+    summary:
+      "IT infrastructure, networking, cybersecurity, cloud, hardware, software, and technical support for oil and gas and energy businesses.",
+    image: "/uploads/2019/11/lava-data-center.jpg",
+    icon: Cpu,
+    tagline: "Powering the Technology Behind Modern Energy Operations",
+    body: [
+      "Brianna Integrated Services provides IT infrastructure, networking, cybersecurity, cloud, hardware, software, and technical support solutions for oil and gas companies, engineering firms, contractors, and corporate organizations.",
+      "From corporate offices to remote project locations, we help businesses deploy and maintain the technology they need to stay connected, productive, and secure.",
+    ],
+  },
 ];
 
-/** The 7 services shown as cards on the Services hub and homepage (top-level only, no EPCIC phase sub-pages). */
+/** The 8 services shown as cards on the Services hub and homepage (top-level only, no EPCIC phase sub-pages). */
 export const topLevelServiceSlugs = [
   "epcic",
   "imr",
@@ -311,6 +327,7 @@ export const topLevelServiceSlugs = [
   "specialist-non-hot-work-metal-infrastructure",
   "wellhead-maintenance-services",
   "mro-materials-supplies",
+  "oil-gas-it-solutions",
 ];
 
 export const topLevelServices = topLevelServiceSlugs

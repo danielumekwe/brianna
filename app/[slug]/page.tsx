@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnimatedSection } from "@/components/animated-section";
 import { ButtonLink } from "@/components/button-link";
 import { CtaBand } from "@/components/cta-band";
 import { MroCategorySection } from "@/components/mro-category-section";
+import { ItCapabilitiesGrid, ItEcosystemGrid, ItIndustriesGrid, ItProcessTimeline } from "@/components/oil-gas-it-sections";
 import { PageBanner } from "@/components/page-banner";
 import { mroCategories } from "@/lib/data/mro-categories";
 import { getRelatedServices, getService, services } from "@/lib/data/services";
@@ -56,6 +58,7 @@ export default async function ServiceDetailPage({ params }: ServiceRouteProps) {
   const Icon = service.icon;
   const relatedServices = getRelatedServices(service);
   const isMro = service.slug === "mro-materials-supplies";
+  const isOilGasIt = service.slug === "oil-gas-it-solutions";
 
   const schema = {
     "@context": "https://schema.org",
@@ -101,6 +104,11 @@ export default async function ServiceDetailPage({ params }: ServiceRouteProps) {
             <div className="mb-5 flex h-14 w-14 items-center justify-center bg-brand-green text-brand-dark">
               <Icon size={28} aria-hidden="true" />
             </div>
+            {service.tagline ? (
+              <p className="mb-4 font-heading text-xl font-bold uppercase leading-snug text-brand-dark md:text-2xl">
+                {service.tagline}
+              </p>
+            ) : null}
             <div className="space-y-5 text-base leading-8 text-brand-muted">
               {service.body.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -141,9 +149,18 @@ export default async function ServiceDetailPage({ params }: ServiceRouteProps) {
               </div>
             ) : null}
 
-            <ButtonLink href="/contact-us" className="mt-8">
-              Contact Us
-            </ButtonLink>
+            {isOilGasIt ? (
+              <div className="mt-8 flex flex-wrap gap-4">
+                <ButtonLink href="/contact-us">Request a Consultation</ButtonLink>
+                <ButtonLink href={`mailto:${siteConfig.email}`} variant="dark">
+                  Talk to Our Team
+                </ButtonLink>
+              </div>
+            ) : (
+              <ButtonLink href="/contact-us" className="mt-8">
+                Contact Us
+              </ButtonLink>
+            )}
           </div>
         </div>
 
@@ -158,10 +175,45 @@ export default async function ServiceDetailPage({ params }: ServiceRouteProps) {
           </div>
         ) : null}
       </article>
-      <CtaBand
-        heading="Your closest partner in Petroleum, Oil & Gas services."
-        body="Upstream | Downstream | Exploration & production"
-      />
+
+      {isOilGasIt ? (
+        <>
+          <AnimatedSection className="bg-brand-surface px-4 py-20">
+            <div className="mx-auto max-w-7xl">
+              <ItCapabilitiesGrid />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection className="px-4 py-20">
+            <div className="mx-auto max-w-7xl">
+              <ItProcessTimeline />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection className="bg-brand-surface px-4 py-20">
+            <div className="mx-auto max-w-7xl">
+              <ItIndustriesGrid />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection className="px-4 py-20">
+            <div className="mx-auto max-w-7xl">
+              <ItEcosystemGrid />
+            </div>
+          </AnimatedSection>
+        </>
+      ) : null}
+
+      {isOilGasIt ? (
+        <CtaBand
+          heading="Let's Build Your IT Infrastructure"
+          body="Whether you are setting up a new office, upgrading your network, securing your infrastructure, or supporting a remote operation, Brianna Integrated Services can help you plan and implement the right technology solution."
+          buttonText="Request a Quote"
+          image={service.image}
+        />
+      ) : (
+        <CtaBand
+          heading="Your closest partner in Petroleum, Oil & Gas services."
+          body="Upstream | Downstream | Exploration & production"
+        />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {breadcrumbSchema ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
