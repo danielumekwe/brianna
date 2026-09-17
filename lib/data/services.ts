@@ -304,11 +304,11 @@ export const services: Service[] = [
   },
   {
     slug: "oil-gas-it-solutions",
-    title: "IT Products & Technical Support",
-    shortTitle: "IT Products & Technical Support",
+    title: "IT Solutions & Technical Support",
+    shortTitle: "IT Solutions & Technical Support",
     summary:
       "IT infrastructure, networking, cybersecurity, cloud, hardware, software, and technical support for oil and gas and energy businesses.",
-    image: "/uploads/2019/11/lava-data-center.jpg",
+    image: "/images/it-technician-server-room.jpg",
     icon: Cpu,
     tagline: "Powering the Technology Behind Modern Energy Operations",
     body: [

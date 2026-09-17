@@ -45,7 +45,7 @@ export const mainNavigation: NavItem[] = [
       },
       { label: "Subsea Services", href: "/subsea-services" },
       { label: "Wellhead Maintenance Services", href: "/wellhead-maintenance-services" },
-      { label: "IT Products & Technical Support", href: "/oil-gas-it-solutions" },
+      { label: "IT Solutions & Technical Support", href: "/oil-gas-it-solutions" },
     ],
   },
   { label: "Contact Us", href: "/contact-us" },

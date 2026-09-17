@@ -6,7 +6,10 @@ export type HeroSlide = {
   buttonHref: string;
 };
 
-/** Verbatim from the live site's Revolution Slider (3 slides, homepage hero carousel). */
+/**
+ * First 3 slides are verbatim from the live site's Revolution Slider; the 4th
+ * was added to spotlight the IT Solutions & Technical Support service.
+ */
 export const heroSlides: HeroSlide[] = [
   {
     heading: "We Build Carefully",
@@ -28,6 +31,13 @@ export const heroSlides: HeroSlide[] = [
     image: "/uploads/2019/11/s-31.jpg",
     buttonText: "Get Quote",
     buttonHref: "/contact-us",
+  },
+  {
+    heading: "IT Solutions & Technical Support",
+    body: "Reliable IT infrastructure, networking, cybersecurity, cloud, hardware, software, and technical support solutions for oil and gas companies and modern energy businesses.",
+    image: "/images/it-technician-server-room.jpg",
+    buttonText: "Explore IT Solutions",
+    buttonHref: "/oil-gas-it-solutions",
   },
 ];
 
